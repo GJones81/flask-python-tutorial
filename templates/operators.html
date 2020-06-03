@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/static/style.css" >
+    <title>PyApp</title>
+</head>
+<body>
+    {{ nav.my_navbar.render() }}
+    <h1>The Current Operators</h1>
+    {% for each in operators%}
+        <h3>{{ each.name }}</h3>
+    {%endfor%}
+    <h2>Add Another Operator</h2>
+        <form action = 'http://localhost:5000/operators' method="POST">
+            <label>Name</label>
+            <input type="text" name="name">
+            <label>Description</label>
+            <input type="text" name="description">
+            <label>Symbol</label>
+            <input type="text" name="symbol">
+            <label>Provide an example</label>
+            <input type="text" name="example">
+            <label>Some common uses</label>
+            <input type="text" name="uses">
+            <input type="submit">
+        </form>
+</body>
+</html>

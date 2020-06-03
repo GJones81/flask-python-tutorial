@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/static/style.css" >
+    <title>PyApp</title>
+</head>
+<body>
+    {{ nav.my_navbar.render() }}
+    <h1>Python Loops</h1>
+    <h2>For Loops</h2>
+        <p>The 'For' loop itirates through a list, one item at a time, and assigns
+            a variable to each loop. The variable allows you to write code that 
+            performs some action on each item in the list.</p>
+        <p> Here's a sample list:</p> 
+            <p>basket = ['apple', 'orange', 'banana', 'strawberry', 'cantaloupe']</p>
+           <p>for <strong>fruit</strong> in <strong>basket</strong>:</p>
+                <p>fruit.upper()</p>
+                <p>return basket</p>
+        <p>The code above takes each item in 'basket', one at a time and names it 'fruit'.
+            Then the upper() function changes each item to all uppercase letters</p>
+    <h2>While Loops</h2>
+            <p>The 'While' loop itirates through a list as long as a test case remains true.
+                It is very important to ensure that a while loop will eventually hit the test case 
+                and stop. The While loop will continue until its test case is made false, or it is stopped 
+                by a stack-overflow error.</p>
+            <p>Here's an example</p>
+            <p>number = 0</p>
+            <p> while(number < 10):</p>
+              <p>number += 1</p>
+              <p>print(number)</p>
+              <p>The code above looks at the number variable, which begins at 0, and evaluates against the 
+                  test case: number < 10. if number is less than 10, the code in the while loop is run. The 
+                  value of number is increased by one, and printed. The cycle begins again at the test case,
+                  and repeats until the test case is made false.</p>  
+    <h2>Range Loops</h2>
+            <p>The range() function can be used to loop through an object within a specified range, at a 
+                specified step size. The function takes up to three arguments: range(start, stop, step).
+                It's important to remember that the starting argument is inclusive, but the stoping argument 
+                is exclusive(the loop will end BEFORE it get to the index specified). The stop argument is 
+                required</p>
+            <p>Sample code</p>
+                <p>x = range(3, 6)</p>
+                <p>for n in x:</p>
+                <p>print(n)</p>
+            <p>The code above will start at three and print 3, then move to 4 and print 4, and
+                then move to 5 and print 5. The stopping argument is exclusive, so the function will stop
+                before 6</p>
+</body>
+</html>
